@@ -1,0 +1,10 @@
+<h2>
+  Перечень деталей
+</h2>
+<ul>
+  <li *ngFor="let detail of details">
+    <app-detail [detail]="detail"></app-detail>
+    <button [routerLink]="['edit/' + detail.id]">Изменить данные</button>
+  </li>
+</ul>
+<button [routerLink]="['new']">Добавить деталь</button>

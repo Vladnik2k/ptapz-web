@@ -1,0 +1,27 @@
+<h2>
+  {{ detail ? 'Редактирование детали' : 'Создание новой детали' }}
+</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">
+      Название
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="vendorCode">
+      Код
+    </label>
+    <input id="vendorCode" type="text" formControlName="vendorCode">
+  </div>
+
+  <div>
+    <label for="note">
+      Коментарий
+    </label>
+    <textarea id="note" type="text" formControlName="note"></textarea>
+  </div>
+
+  <button class="button" type="submit">Сохранить</button>
+</form>

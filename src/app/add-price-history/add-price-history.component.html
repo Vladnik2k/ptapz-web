@@ -1,0 +1,29 @@
+<h2>
+  Добавить изменение цены
+</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="detailId">
+      Деталь
+    </label>
+    <select id="detailId" formControlName="detailId">
+      <option *ngFor="let detail of details" value="{{ detail.id }}"> {{ detail.name }} </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="price">
+      Новая цена
+    </label>
+    <input id="price" type="text" formControlName="price">
+  </div>
+
+  <div>
+    <label for="changedAt">
+      Действительно с:
+    </label>
+    <input id="changedAt" type="date" formControlName="changedAt">
+  </div>
+
+  <button class="button" type="submit">Сохранить</button>
+</form>

@@ -1,0 +1,31 @@
+<h2>
+  Создание новой поставки
+</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="supplierId">
+      Название
+    </label>
+    <select id="supplierId" formControlName="supplierId">
+      <option *ngFor="let supplier of suppliers" value="{{ supplier.id }}"> {{ supplier.name }} </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="detailId">
+      Деталь
+    </label>
+    <select id="detailId" formControlName="detailId">
+      <option *ngFor="let detail of details" value="{{ detail.id }}"> {{ detail.name }} </option>
+    </select>
+  </div>
+
+  <div>
+    <label for="numberOfDetails">
+      Количество деталей
+    </label>
+    <input id="numberOfDetails" type="text" formControlName="numberOfDetails">
+  </div>
+
+  <button class="button" type="submit">Сохранить</button>
+</form>

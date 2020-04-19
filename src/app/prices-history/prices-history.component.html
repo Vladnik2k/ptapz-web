@@ -1,0 +1,9 @@
+<h2>
+  История изменения цен деталей
+</h2>
+<ul>
+  <li *ngFor="let priceHistory of pricesHistory">
+    <app-price-history [priceHistory]="priceHistory"></app-price-history>
+  </li>
+</ul>
+<button [routerLink]="['new']">Добавить изменение детали</button>

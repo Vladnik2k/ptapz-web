@@ -1,0 +1,10 @@
+<h2>
+  Перечень поставщиков
+</h2>
+<ul>
+  <li *ngFor="let supplier of supplies">
+    <app-supplier [supplier]="supplier"></app-supplier>
+    <button [routerLink]="['edit/' + supplier.id]">Изменить данные</button>
+  </li>
+</ul>
+<button [routerLink]="['new']">Добавить поставщика</button>

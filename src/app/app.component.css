@@ -1,0 +1,8 @@
+.navigation-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navigation-bar > span:hover {
+  cursor: pointer;
+}

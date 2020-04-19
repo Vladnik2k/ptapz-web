@@ -1,0 +1,27 @@
+<h2>
+  {{ supplier ? 'Редактирование информации о поставщике' : 'Создание нового поставщика' }}
+</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">
+      Название
+    </label>
+    <input id="name" type="text" formControlName="name">
+  </div>
+
+  <div>
+    <label for="address">
+      Адрес
+    </label>
+    <input id="address" type="text" formControlName="address">
+  </div>
+
+  <div>
+    <label for="phoneNumber">
+      Номер телефона
+    </label>
+    <input id="phoneNumber" type="text" formControlName="phoneNumber">
+  </div>
+
+  <button class="button" type="submit">Сохранить</button>
+</form>
